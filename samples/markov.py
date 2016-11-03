@@ -49,3 +49,13 @@ def wordmaker(freq):
     return word
 
 print wordmaker(freq_finder(names)).title()
+print wordmaker(freq_finder(names)).title()
+print wordmaker(freq_finder(names)).title()
+print wordmaker(freq_finder(names)).title()
+print wordmaker(freq_finder(names)).title()
+print wordmaker(freq_finder(names)).title()
+print wordmaker(freq_finder(names)).title()
+print wordmaker(freq_finder(names)).title()
+print wordmaker(freq_finder(names)).title()
+print wordmaker(freq_finder(names)).title()
+print wordmaker(freq_finder(names)).title()
