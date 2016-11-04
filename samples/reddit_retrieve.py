@@ -1,9 +1,11 @@
 import praw
 
-p = praw.Reddit( user_agent='nanogenmo_nosleep' )
-submissions = p.get_subreddit( 'nosleep' ).get_hot( limit=20 )
+subreddit = 'nosleep'
 
-output_file = open( '../text/nosleep.txt', 'w' )
+p = praw.Reddit( user_agent='nanogenmo_' + subreddit )
+submissions = p.get_subreddit( subreddit ).get_hot( limit=100 )
+
+output_file = open( '../text/' + subreddit + '.txt', 'w' )
 
 for submission in submissions:
     output_file.write( submission.selftext.encode('utf-8').strip() )

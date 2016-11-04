@@ -1,9 +1,16 @@
+import glob
 import markovify
 import random
 
-input_file = open( '../text/nosleep.txt', 'r' )
+subreddit = 'nosleep'
+cache_dir = '../text/cache/' + subreddit + '/'
 
-st = input_file.read()
+st = ''
+
+for filename in glob.glob( cache_dir + '*.txt' ):
+    input_file = open( filename, 'r' )
+    st += input_file.read() + '\n'
+    input_file.close()
 
 model = markovify.Text( st )
 
