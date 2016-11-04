@@ -22,7 +22,7 @@ def syllables(word):
 with open("../text/sonnets.txt") as f:
     text = f.read()
 
-text_model = markovify.Text(text)
+text_model = markovify.Text(text, state_size=1)
 
 i = 0
 while i < 12:
