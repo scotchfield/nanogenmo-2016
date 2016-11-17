@@ -1,9 +1,6 @@
 import random
 from bisect import bisect
 
-input_file = open('../text/firstnames.txt', 'r')
-names = input_file.read().strip().split('\n')
-
 
 def tupler(freq, letter):
     freqx = freq[letter]
@@ -26,7 +23,9 @@ def weighted_choice(choices):
     return values[i]
 
 
-def freq_finder(names):
+def freq_finder(path):
+    input_file = open(path, 'r')
+    names = input_file.read().strip().split('\n')
     freq_obj = {}
     for name in names:
         last_c = ''
@@ -47,15 +46,3 @@ def wordmaker(freq):
     for i in range(random.randint(2, 7)):
         word += weighted_choice(tupler(freq, word[-1]))
     return word
-
-print wordmaker(freq_finder(names)).title()
-print wordmaker(freq_finder(names)).title()
-print wordmaker(freq_finder(names)).title()
-print wordmaker(freq_finder(names)).title()
-print wordmaker(freq_finder(names)).title()
-print wordmaker(freq_finder(names)).title()
-print wordmaker(freq_finder(names)).title()
-print wordmaker(freq_finder(names)).title()
-print wordmaker(freq_finder(names)).title()
-print wordmaker(freq_finder(names)).title()
-print wordmaker(freq_finder(names)).title()
