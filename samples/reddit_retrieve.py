@@ -3,7 +3,7 @@ import praw
 subreddit = 'nosleep'
 
 p = praw.Reddit( user_agent='nanogenmo_' + subreddit )
-submissions = p.get_subreddit( subreddit ).get_hot( limit=100 )
+submissions = p.get_subreddit( subreddit ).get_hot( limit=1000 )
 
 output_file = open( '../text/' + subreddit + '.txt', 'w' )
 
